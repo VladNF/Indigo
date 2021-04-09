@@ -42,10 +42,10 @@ namespace indigo
     {
     public:
         TimeoutCancellationHandler(int mseconds = 0);
-        virtual ~TimeoutCancellationHandler();
+        ~TimeoutCancellationHandler() override;
 
-        virtual bool isCancelled();
-        virtual const char* cancelledRequestMessage();
+        bool isCancelled() override;
+        const char* cancelledRequestMessage() override;
 
         void reset(int mseconds);
 
