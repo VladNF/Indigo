@@ -34,6 +34,7 @@ namespace indigo
     class DLLEXPORT CancellationHandler
     {
     public:
+        virtual ~CancellationHandler() = default;
         virtual bool isCancelled() = 0;
         virtual const char* cancelledRequestMessage() = 0;
     };
